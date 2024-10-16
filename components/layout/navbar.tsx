@@ -3,7 +3,7 @@
 import { useContext } from "react";
 import Link from "next/link";
 import { useSelectedLayoutSegment } from "next/navigation";
-import { useSession } from "next-auth/react";
+import { signOut, useSession } from "next-auth/react";
 
 import { docsConfig } from "@/config/docs";
 import { marketingConfig } from "@/config/marketing";
@@ -16,6 +16,7 @@ import { DocsSearch } from "@/components/docs/search";
 import { ModalContext } from "@/components/modals/providers";
 import { Icons } from "@/components/shared/icons";
 import MaxWidthWrapper from "@/components/shared/max-width-wrapper";
+import { RainbowButton } from "@/components/ui/rainbow-button"; // Ensure this import is present
 
 interface NavBarProps {
   scroll?: boolean;
@@ -48,12 +49,17 @@ export function NavBar({ scroll = false }: NavBarProps) {
         large={documentation}
       >
         <div className="flex gap-6 md:gap-10">
-          <Link href="/" className="flex items-center space-x-1.5">
-            <Icons.logo />
-            <span className="font-urban text-xl font-bold">
-              {siteConfig.name}
-            </span>
-          </Link>
+          <RainbowButton
+            className="flex items-center space-x-1.5 px-3"
+            aria-label={siteConfig.name}
+          >
+            <Link href="/" className="flex items-center space-x-1.5">
+              <Icons.logo />
+              <span className="font-urban text-xl font-bold">
+                {siteConfig.name}
+              </span>
+            </Link>
+          </RainbowButton>
 
           {links && links.length > 0 ? (
             <nav className="hidden gap-6 md:flex">
@@ -105,26 +111,21 @@ export function NavBar({ scroll = false }: NavBarProps) {
               href={session.user.role === "ADMIN" ? "/admin" : "/dashboard"}
               className="hidden md:block"
             >
-              <Button
-                className="gap-2 px-5"
-                variant="default"
-                size="sm"
-                rounded="full"
+              <RainbowButton
+                className="sm gap-2 rounded-full px-5"
+                aria-label="Dashboard"
               >
                 <span>Dashboard</span>
-              </Button>
+              </RainbowButton>
             </Link>
           ) : status === "unauthenticated" ? (
-            <Button
+            <RainbowButton
               className="hidden gap-2 px-5 md:flex"
-              variant="default"
-              size="sm"
-              rounded="full"
               onClick={() => setShowSignInModal(true)}
             >
               <span>Sign In</span>
               <Icons.arrowRight className="size-4" />
-            </Button>
+            </RainbowButton>
           ) : (
             <Skeleton className="hidden h-9 w-28 rounded-full lg:flex" />
           )}

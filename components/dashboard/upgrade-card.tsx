@@ -6,6 +6,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { RainbowButton } from "../ui/rainbow-button";
 
 export function UpgradeCard() {
   return (
@@ -17,9 +18,9 @@ export function UpgradeCard() {
         </CardDescription>
       </CardHeader>
       <CardContent className="md:max-xl:px-4">
-        <Button size="sm" className="w-full">
+        <RainbowButton className="w-full">
           Upgrade
-        </Button>
+        </RainbowButton>
       </CardContent>
     </Card>
   );

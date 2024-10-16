@@ -9,7 +9,11 @@ import {
 } from "@/components/layout/dashboard-sidebar";
 import { ModeToggle } from "@/components/layout/mode-toggle";
 import { UserAccountNav } from "@/components/layout/user-account-nav";
+import { RainbowButton } from "@/components/ui/rainbow-button";
 import MaxWidthWrapper from "@/components/shared/max-width-wrapper";
+import Link from "next/link";
+import { Icons } from "@/components/shared/icons";
+import { siteConfig } from "@/config/site";
 
 interface ProtectedLayoutProps {
   children: React.ReactNode;
@@ -40,7 +44,19 @@ export default async function Dashboard({ children }: ProtectedLayoutProps) {
               <SearchCommand links={filteredLinks} />
             </div>
 
-            <ModeToggle />
+           
+            <RainbowButton
+            className="flex items-center space-x-1.5 px-3"
+            aria-label={siteConfig.name}
+          >
+            <Link href="/" className="flex items-center space-x-1.5">
+              <Icons.logo />
+              <span className="font-urban text-xl font-bold">
+                {siteConfig.name}
+              </span>
+            </Link>
+          </RainbowButton>
+           <ModeToggle />
             <UserAccountNav />
           </MaxWidthWrapper>
         </header>

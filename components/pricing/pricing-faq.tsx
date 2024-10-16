@@ -43,13 +43,11 @@ const pricingFaqData = [
 export function PricingFaq() {
   return (
     <section className="container max-w-4xl py-2">
-      <HeaderSection
-        label="FAQ"
-        title="Frequently Asked Questions"
-        subtitle="Explore our comprehensive FAQ to find quick answers to common
-          inquiries. If you need further assistance, don't hesitate to
-          contact us for personalized help."
-      />
+    <HeaderSection
+    label="FAQ"
+    title="Häufig gestellte Fragen"
+    subtitle="Durchstöbern Sie unsere umfassenden FAQs, um schnelle Antworten auf häufige Anfragen zu finden. Wenn Sie weitere Unterstützung benötigen, zögern Sie nicht, uns für persönliche Hilfe zu kontaktieren."
+/>
 
       <Accordion type="single" collapsible className="my-12 w-full">
         {pricingFaqData.map((faqItem) => (

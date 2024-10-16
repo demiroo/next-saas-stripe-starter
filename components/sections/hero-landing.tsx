@@ -16,7 +16,7 @@ export default async function HeroLanding() {
           "Content-Type": "application/json",
         },
       }),
-      // data will revalidate every hour
+      // Daten werden jede Stunde neu validiert
       next: { revalidate: 3600 },
     },
   )
@@ -35,14 +35,14 @@ export default async function HeroLanding() {
           target="_blank"
         >
           <span className="mr-3">🎉</span>
-          <span className="hidden md:flex">Introducing&nbsp;</span> Next Auth
-          Roles Template on <Icons.twitter className="ml-2 size-3.5" />
+          <span className="hidden md:flex">Entdecken Sie&nbsp;</span> unser
+          Website-Builder-Tool auf <Icons.twitter className="ml-2 size-3.5" />
         </Link>
 
         <h1 className="text-balance font-urban text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-[66px]">
-          Kick off with a bang with{" "}
+          Wir entwickeln Ihre Traum-Website mit{" "}
           <span className="text-gradient_indigo-purple font-extrabold">
-            SaaS Starter
+            SitePilot
           </span>
         </h1>
 
@@ -50,8 +50,10 @@ export default async function HeroLanding() {
           className="max-w-2xl text-balance leading-normal text-muted-foreground sm:text-xl sm:leading-8"
           style={{ animationDelay: "0.35s", animationFillMode: "forwards" }}
         >
-          Build your next project using Next.js 14, Prisma, Neon, Auth.js v5,
-          Resend, React Email, Shadcn/ui, Stripe.
+          Nutzen Sie unsere leistungsstarken Tools, um Ihre eigene Website
+          schnell und einfach zu erstellen. Egal, ob Sie ein Unternehmen
+          starten oder Ihre Online-Präsenz verbessern möchten, wir haben die
+          Lösungen für Sie.
         </p>
 
         <div
@@ -66,7 +68,7 @@ export default async function HeroLanding() {
               "gap-2",
             )}
           >
-            <span>Go Pricing</span>
+            <span>Preise ansehen</span>
             <Icons.arrowRight className="size-4" />
           </Link>
           <Link
@@ -84,7 +86,7 @@ export default async function HeroLanding() {
           >
             <Icons.gitHub className="mr-2 size-4" />
             <p>
-              <span className="hidden sm:inline-block">Star on</span> GitHub{" "}
+              <span className="hidden sm:inline-block">Star auf</span> GitHub{" "}
               <span className="font-semibold">{nFormatter(stars)}</span>
             </p>
           </Link>
