@@ -16,7 +16,7 @@ const config = {
   prefix: "",
   theme: {
   	container: {
-  		center: 'true',
+  		center: true,
   		padding: '.8rem'
   	},
   	extend: {
