@@ -1,3 +1,5 @@
+/* eslint-disable tailwindcss/migration-from-tailwind-2 */
+/* eslint-disable @next/next/no-img-element */
 'use client'
 
 import { useState, useEffect } from "react"
