@@ -16,7 +16,7 @@ const config = {
   prefix: "",
   theme: {
   	container: {
-  		center: true,
+  		center: 'true',
   		padding: '.8rem'
   	},
   	extend: {
@@ -143,6 +143,25 @@ const config = {
   				'100%': {
   					'background-position': '200%'
   				}
+  			},
+  			ripple: {
+  				'0%, 100%': {
+  					transform: 'translate(-50%, -50%) scale(1)'
+  				},
+  				'50%': {
+  					transform: 'translate(-50%, -50%) scale(0.9)'
+  				}
+  			},
+  			shine: {
+  				'0%': {
+  					'background-position': '0% 0%'
+  				},
+  				'50%': {
+  					'background-position': '100% 100%'
+  				},
+  				to: {
+  					'background-position': '0% 0%'
+  				}
   			}
   		},
   		animation: {
@@ -152,7 +171,9 @@ const config = {
   			'fade-down': 'fade-down 0.5s',
   			'fade-in': 'fade-in 0.4s',
   			'fade-out': 'fade-out 0.4s',
-  			rainbow: 'rainbow var(--speed, 2s) infinite linear'
+  			rainbow: 'rainbow var(--speed, 2s) infinite linear',
+  			ripple: 'ripple var(--duration,2s) ease calc(var(--i, 0)*.2s) infinite',
+  			shine: 'shine var(--duration) infinite linear'
   		}
   	}
   },

@@ -10,33 +10,33 @@ import { HeaderSection } from "../shared/header-section";
 const pricingFaqData = [
   {
     id: "item-1",
-    question: "What is the cost of the free plan?",
+    question: "Was kostet der kostenlose Plan?",
     answer:
-      "Our free plan is completely free, with no monthly or annual charges. It's a great way to get started and explore our basic features.",
+      "Unser kostenloser Plan ist völlig kostenlos, ohne monatliche oder jährliche Gebühren. Es ist eine großartige Möglichkeit, um zu starten und unsere grundlegenden Funktionen zu erkunden.",
   },
   {
     id: "item-2",
-    question: "How much does the Basic Monthly plan cost?",
+    question: "Wie viel kostet der Basis-Monatsplan?",
     answer:
-      "The Basic Monthly plan is priced at $15 per month. It provides access to our core features and is billed on a monthly basis.",
+      "Der Basis-Monatsplan kostet 15 $ pro Monat. Er bietet Zugang zu unseren Kernfunktionen und wird monatlich abgerechnet.",
   },
   {
     id: "item-3",
-    question: "What is the price of the Pro Monthly plan?",
+    question: "Was kostet der Pro-Monatsplan?",
     answer:
-      "The Pro Monthly plan is available for $25 per month. It offers advanced features and is billed on a monthly basis for added flexibility.",
+      "Der Pro-Monatsplan ist für 25 $ pro Monat erhältlich. Er bietet erweiterte Funktionen und wird monatlich abgerechnet, um mehr Flexibilität zu bieten.",
   },
   {
     id: "item-4",
-    question: "Do you offer any annual subscription plans?",
+    question: "Bieten Sie jährliche Abonnements an?",
     answer:
-      "Yes, we offer annual subscription plans for even more savings. The Basic Annual plan is $144 per year, and the Pro Annual plan is $300 per year.",
+      "Ja, wir bieten jährliche Abonnements für noch mehr Einsparungen an. Der Basis-Jahresplan kostet 144 $ pro Jahr, und der Pro-Jahresplan kostet 300 $ pro Jahr.",
   },
   {
     id: "item-5",
-    question: "Is there a trial period for the paid plans?",
+    question: "Gibt es eine Testphase für die kostenpflichtigen Pläne?",
     answer:
-      "We offer a 14-day free trial for both the Pro Monthly and Pro Annual plans. It's a great way to experience all the features before committing to a paid subscription.",
+      "Wir bieten eine 14-tägige kostenlose Testphase für sowohl den Pro-Monats- als auch den Pro-Jahresplan an. Es ist eine großartige Möglichkeit, alle Funktionen zu erleben, bevor Sie sich für ein kostenpflichtiges Abonnement entscheiden.",
   },
 ];
 
